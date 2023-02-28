@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="suma.css">
+	<title>The customer form from Kns stores</title>
+	<script type="text/javascript">
+		function validateKnsForm(){
+			var x
+			document.form["myForm"]["firstname"].value;
+			if (x==="") {
+				alert('Customer fill in the names please');
+				return true;
+			}
+		}
+
+	</script>
+</head>
+<body>
+	<form name="myForm" action="insertKns.php" onsubmit=" return validateKnsForm()">
+		<label>Enter your name:</label><br>
+		<input type="text" name="firstname" placeholder="Enter the firstname:"><br>
+		<input type="submit" name="submit" value="Submit">
+		
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+body{
+	background-color: #faf;
+
+}
+.head{
+	font-size: 45px;
+	background-color: #000;
+	color: #fff;
+}
+.theader{
+
+}
+ul{
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+ul li{
+	float: left;
+	width: 240px;
+	height: 70px;
+	background-color: #000;
+	opacity: .8;
+	line-height: 40px;
+	text-align: center;
+	font-size: 20px;
+	margin-right: 2px;
+}
+ul li a{
+	text-decoration: none;
+
+}
+ul li a:hover{
+	text-transform: uppercase;
+	color: green;
+	background-color: #dac;
+}
+ul li ul li{
+	display: none;
+}
+ul li:hover ul li{
+	display: block;
+}
+.middleBackground{
+	background-color: #fff678;
+	font-size: 25px;
+line-height: 90px;
+	background-image: url('maya/bg1.jfif');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.roundedElements{
+	width: 210px;
+	height: 400px;
+	float: right;
+	border-radius: 20px;
+	background-color: #888;
+}
+footer{
+	font-size: 20px;
+	text-align: center;
+	align-items: center;
+	background-color: #87ffff;
+	padding-top: 15px;
+	
+	
+}
+footer:hover{
+	color: red;
+	text-transform: uppercase;
+
+	font-size: 18px;
+}
+.container{
+	width: 600px;
+	height: 400px;
+	max-width: 0 auto;
+	padding: 0px;
+}
+
+
+
+
+
+

@@ -1,0 +1,92 @@
+<html> 
+<head>
+<title>Form Validation</title> <script type = "text/javascript">
+function formValidate() {
+if( document.myForm.Name.value == "" ) { alert( "Please provide your name!" ); 
+    document.myForm.Name.focus() ;
+    return false;
+}
+if( document.myForm.EMail.value == "" ) {
+alert( "Please provide your Email!" ); 
+document.myForm.EMail.focus() ; 
+return false;
+}
+if( document.myForm.Religion.value == "-1" ) { 
+	alert( "Please provide your religion!" );
+    return false;
+}
+var emailID = document.myForm.EMail.value; 
+atpos = emailID.indexOf("@");
+dotpos = emailID.lastIndexOf(".");
+if (atpos < 1 || ( dotpos - atpos < 2 )) { 
+	alert("Please enter correct email ID") 
+	document.myForm.EMail.focus() ; 
+	return false;
+}
+if((document.myForm.gender[0].checked ==false) &&
+	(document.myForm.gender[1].checked ==false)){
+	alert("Select  gender");
+    return false;
+}
+var p_match = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z0-9]).{8,25}$/;
+if(document.myForm.Password.value.match(!p_match)){
+	alert("Password should have atleast on uppercase character ......");
+	return false;
+}
+return( true ); 
+}
+ function storeCookie(){
+ 	if(document.myForm.Name.value=""){
+ 		alert("Enter name");
+ 		return;
+ 	}
+ cookie_data = escape(document.myForm.Name.value)+";"
+ document.cookie = "User_details = "+cookie_data;
+ document.write("My cookie:"+"User_details="+cookie_data);
+
+ }
+
+</script> 
+</head>
+<body>
+<form action = "" name = "myForm" onsubmit = "return(formValidate());">
+<table cellspacing = "2" cellpadding = "2" border = "1">
+<tr>
+<td align = "right">Name</td>
+<td><input type = "text" name = "Name" /></td>
+</tr>
+<tr>
+<td align = "right">EMail</td>
+<td><input type = "text" name = "EMail" /></td>
+</tr>
+<tr>
+<td align = "right">Religion</td> <td>
+<select name = "Religion">
+<option value = "-1" selected>[select your religion]
+</option> <option value = "Muslim">Muslim</option>
+<option value = "Catholics">Catholics</option>
+<option value = "Angrican">Angrican</option>
+</select> </td>
+</tr>
+<tr>
+<td><b> Gender </b></td>
+<td>
+<input type="radio" name="gender" value="Male"> Male 
+<input type="radio" name="gender" value="Female"> Female </td>
+</tr>
+<tr>
+	<td>Password</td>
+	<td>
+		<input type="Password" name="Password"> 
+	</td>
+</tr>
+
+
+<tr>
+<td align = "right"></td>
+<td><input type = "submit" value = "Submit" /></td>
+</tr>
+</table> 
+</form>
+</body>
+</html>
